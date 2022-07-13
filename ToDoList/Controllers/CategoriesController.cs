@@ -28,7 +28,7 @@ namespace ToDoList.Controllers
     }
 
     [HttpGet("/categories/{id}")]
-    pubic ActionResult Show(int id)
+    public ActionResult Show(int id)
     {
     Dictionary<string, object> model = new Dictionary<string, object>();
     Category selectedCategory = Category.Find(id);
@@ -39,7 +39,7 @@ namespace ToDoList.Controllers
     }
 
     // This one creates new Items within a given Category, not new Categories:
-    
+
       [HttpPost("/categories/{categoryId}/items")]
     public ActionResult Create(int categoryId, string itemDescription)
     {
