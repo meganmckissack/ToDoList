@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 // using MySql.Data.MySqlClient;
 
@@ -11,6 +12,8 @@ namespace ToDoList.Models
 
     public int ItemId { get; set; }
     public string Description { get; set; }
+    public bool Done { get; set; }
+    public DateTime DueDate { get; set; }
 
     public virtual ICollection<CategoryItem> JoinEntities { get;}
   }
